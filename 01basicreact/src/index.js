@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+
+const root = ReactDOM.createRoot(document.getElementById('root')); //createRoot expects a DOM element as an argument which is given
+                                                  //given to it by selecting a Id from index.html from the public
+root.render(               // starts the rendering// what is rendering?                                      
+  //<React.StrictMode> //optional used for highlighting potential problems in an applicationhence only useful in production
     <App />
-  </React.StrictMode>
+  //</React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
