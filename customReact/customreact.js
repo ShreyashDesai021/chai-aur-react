@@ -1,0 +1,26 @@
+function customRender(reactElement, container){
+    const domElement = document.createElement
+    (reactElement.type)
+    domElement.innerHTML = reactElement.children
+    domElement.setAttribute('href',reactElement.props.href)
+    domElement.setAttribute('target',reactElement.props.target)
+    container.appendChild(domElement)
+}
+
+
+//How react looks after compiling an element:
+
+const reactElement = {
+    type: 'a',
+    props: {
+        href: 'https://google.com',
+        target: '_blank'
+    },
+    children: 'Click me to visit Google'
+}
+
+const mainContainer = document.querySelector('#root')
+
+// Method to render the above reactElement in root. i.e it adds it to the root
+
+customRender(reactElement, mainContainer)
