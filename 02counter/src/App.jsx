@@ -13,13 +13,25 @@ function App() {
                 //counter is a variable here and setCounter is a function that updates all the occurence of the counter variable
   //let counter = 15
 
+  // const addValue = () => {
+  //   //console.log("value added", Math.random())
+  //   //console.log("clicked", counter)
+  //   counter = counter + 1;
+  //   if(counter > 20) counter = 20;
+  //   setCounter(counter)
+  //   console.log("clicked", counter)
+  // }
+
   const addValue = () => {
-    //console.log("value added", Math.random())
-    //console.log("clicked", counter)
-    counter = counter + 1;
-    if(counter > 20) counter = 20;
-    setCounter(counter)
-    console.log("clicked", counter)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
   }
 
   const removeValue = () => {
